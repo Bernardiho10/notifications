@@ -1,0 +1,58 @@
+.notificationContainer{
+    display: flex;
+    padding: 20px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #f6fafd;
+    border: 1px solid #f7f8fc;
+}
+
+.imgContainer img{
+    width: 50px;
+    height: 50px;
+}
+
+.contentContainer{
+    color: #666970;
+}
+
+.contentContainer p{
+    margin: 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.active .contentContainer p > span::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ff4d45;
+    position: absolute;
+    top: 30%;
+    left: 104%;
+    border-radius: 50%;
+}
+
+.time{
+    padding-left: 20px;
+    color: #b1b4bd;
+}
+
+.contentContainer p > strong{
+    font-weight: 700;
+    color: #191c23;
+}
+
+.contentContainer p > span{
+    color: #99a0a8;
+    font-weight: 700;
+    position: relative;
+}
+
+.contentContainer p > span:hover,
+.contentContainer p > strong:hover{
+    color: #3f48cc;
+}
