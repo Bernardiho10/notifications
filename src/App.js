@@ -3,6 +3,7 @@ import { Grid, Typography, createTheme, ThemeProvider, LinearProgress } from '@m
 import PlusJakart from './assets/fonts/PlusJakartaSans-VariableFont_wght.ttf';
 import Notifications from './components/Notifications';
 import { useState, useEffect, useRef } from 'react';
+import notificationss from './components/data.js'
 
 const theme = createTheme({
   typography: {
@@ -18,14 +19,11 @@ function App() {
 
   const [notifications, setNotifications] = useState([])
 
-  let activeNotifications = document.querySelectorAll('.notificationContainer')
-
   useEffect(() => {
-    fetch('http://localhost:3000/notifications')
-      .then(respone => respone.json())
-      .then(notifications => setNotifications(notifications))
+    setNotifications(notificationss)
   }, [])
 
+  console.log(notifications)
 
   const unreadNotifications = notifications.filter(notification => notification.read == ! true);
 
@@ -61,7 +59,7 @@ function App() {
               '&:hover': {
                 color: "#3f48cc",
               }
-            }} variant='subtitle' onClick={() => readAll()}>Mark all as read</Typography>
+            }} variant='subtitle'>Mark all as read</Typography>
           </Grid>
         </Grid>
 
