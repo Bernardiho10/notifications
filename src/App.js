@@ -1,8 +1,8 @@
 import './App.css';
-import { Grid, Typography, createTheme, ThemeProvider } from '@mui/material';
+import { Grid, Typography, createTheme, ThemeProvider, LinearProgress } from '@mui/material';
 import PlusJakart from './assets/fonts/PlusJakartaSans-VariableFont_wght.ttf';
 import Notifications from './components/Notifications';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const theme = createTheme({
   typography: {
@@ -18,15 +18,18 @@ function App() {
 
   const [notifications, setNotifications] = useState([])
 
+  let activeNotifications = document.querySelectorAll('.notificationContainer')
+
   useEffect(() => {
     fetch('http://localhost:3000/notifications')
       .then(respone => respone.json())
       .then(notifications => setNotifications(notifications))
   }, [])
 
-  const readAll = () => {
-    console.log(notifications)
-  }
+
+  const unreadNotifications = notifications.filter(notification => notification.read == ! true);
+
+  
 
   return (
     <Grid container spacing={4} sx={{ p: "20px 10px" }}>
@@ -40,12 +43,12 @@ function App() {
             <ThemeProvider theme={theme}>
               <Typography sx={{ fontSize: "1.35rem" }} variant="h5">Notifications <Typography sx={{
                 m: "0 5px",
-                backgroundColor: "#07317b",
-                color: "#ffffff",
+                backgroundColor: "hsl(219, 85%, 26%)",
+                color: "hsl(0, 0%, 100%)",
                 p: "0 10px",
                 borderRadius: "5px",
                 fontSize: "1.15rem"
-              }} variant="subtitle" >3</Typography></Typography>
+              }} variant="subtitle" >{unreadNotifications.length}</Typography></Typography>
             </ThemeProvider>
           </Grid>
           <Grid item xs={4} sx={{ textAlign: "right" }}>
@@ -62,15 +65,24 @@ function App() {
           </Grid>
         </Grid>
 
+        { /* Notifications */}
+
+        <Grid item xs={12}>
+          <Notifications notifications={notifications}></Notifications>
+        </Grid>
+
       </Grid>
 
-      { /* Notifications */}
-
-      <Grid item xs={12}>
-        <Notifications></Notifications>
+      <Grid sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        textAlign: "center"
+      }} item xs={12} lg={6} >
+        <Typography sx={{ fontSize: "1rem" }} variant='h2'>Notification Design</Typography>
+        <LinearProgress color="secondary" />
+        <Typography sx={{ fontSize: "1.5rem" }} variant='h3'>Developed by Bernard Oko</Typography>
       </Grid>
-
-
 
     </Grid>
   );

@@ -3,10 +3,11 @@
     padding: 20px 10px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 20px 0;
 }
 
 .active{
-    background-color: #f6fafd;
+    background-color: hsl(210, 60%, 98%);
     border: 1px solid #f7f8fc;
 }
 
@@ -29,7 +30,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background-color: #ff4d45;
+    background-color: hsl(1, 90%, 64%);
     position: absolute;
     top: 30%;
     left: 104%;
@@ -43,16 +44,42 @@
 
 .contentContainer p > strong{
     font-weight: 700;
-    color: #191c23;
+    color: hsl(224, 21%, 14%);
 }
 
 .contentContainer p > span{
-    color: #99a0a8;
+    color: hsl(219, 12%, 42%);
     font-weight: 700;
     position: relative;
+    display: inline-block;
 }
 
 .contentContainer p > span:hover,
-.contentContainer p > strong:hover{
+.contentContainer p > strong:hover,
+.contentContainer p > span:active,
+.contentContainer p > strong:active{
     color: #3f48cc;
+}
+
+.privateMessage{
+    margin: 10px 0 !important;
+}
+
+.privateMessage span{
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin: 0;
+    display: block;
+    color: unset !important;
+    font-weight: 400 !important;
+}
+
+.privateMessage span:hover,
+.privateMessage span:active{
+    background-color: #e5eff9;
+}
+
+.chess{
+    color: hsl(219, 85%, 26%) !important;
 }
