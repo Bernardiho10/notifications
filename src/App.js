@@ -27,7 +27,7 @@ function App() {
 
   const unreadNotifications = notifications.filter(notification => notification.read == ! true);
 
-  
+
 
   return (
     <Grid container spacing={4} sx={{ p: "20px 10px" }}>
@@ -77,9 +77,11 @@ function App() {
         justifyContent: "center",
         textAlign: "center"
       }} item xs={12} lg={6} >
-        <Typography sx={{ fontSize: "1rem" }} variant='h2'>Notification Design</Typography>
-        <LinearProgress color="secondary" />
-        <Typography sx={{ fontSize: "1.5rem" }} variant='h3'>Developed by Bernard Oko</Typography>
+        <div className='left_content'>
+          <Typography sx={{ fontSize: "1rem", fontWeight: 100  }} variant='h2'>Notification Design</Typography>
+          <LinearProgress color="success" />
+          <Typography sx={{ fontSize: "1.5rem", fontWeight: 500 }} variant='h3'>Developed by <a href=''>Bernard Oko</a></Typography>
+        </div>
       </Grid>
 
     </Grid>

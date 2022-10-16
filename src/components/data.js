@@ -11,7 +11,7 @@ let notificationss = [
                 time: "1m ago"
             }
         ],
-        userImg: "../assets/images/avatar-mark-webber.jpg",
+        userImg: "/images/avatar-mark-webber.webp",
         read: false
     },
     {
@@ -24,7 +24,7 @@ let notificationss = [
                 time: "5m ago"
             }
         ],
-        userImg: "../assets/images/avatar-angela-gray.jpg",
+        userImg: "/images/avatar-angela-gray.webp",
         read: false
     },
     {
@@ -39,7 +39,7 @@ let notificationss = [
                 time: "1day ago"
             }
         ],
-        userImg: "../assets/images/avatar-jacob-thompson.jpg",
+        userImg: "/images/avatar-jacob-thompson.webp",
         read: false
     },
     {
@@ -54,7 +54,7 @@ let notificationss = [
                 time: "5days ago"
             }
         ],
-        userImg: "../assets/images/avatar-rizky-hasanuddin.jpg",
+        userImg: "/images/avatar-rizky-hasanuddin.webp",
         read: true
     },
     {
@@ -69,7 +69,7 @@ let notificationss = [
                 time: "1week ago"
             }
         ],
-        userImg: "../assets/images/avatar-kimberly-smith.jpg",
+        userImg: "/images/avatar-kimberly-smith.webp",
         read: true
     },
     {
@@ -84,7 +84,7 @@ let notificationss = [
                 time: "2weeks ago"
             }
         ],
-        userImg: "../assets/images/avatar-rizky-hasanuddin.jpg",
+        userImg: "/images/avatar-rizky-hasanuddin.webp",
         read: true
     },
     {
@@ -99,7 +99,7 @@ let notificationss = [
                 time: "1day ago"
             }
         ],
-        userImg: "../assets/images/avatar-anna-kim.jpg",
+        userImg: "/images/avatar-anna-kim.webp",
         read: true
     }
 ]
