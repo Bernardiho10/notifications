@@ -17,7 +17,11 @@ export default function Notifications(props) {
                         {
                             notifications.notification[0].privateMessage && <p className='privateMessage'><span>{notifications.notification[0].privateMessage}</span></p>
                         }
+                        
                     </div>
+                    {
+                        notifications.notification[0].commentImage && <div className='commentImg'><img alt="User imgae" src={notifications.notification[0].commentImage} /></div>
+                    }
                 </div>
             )
         })

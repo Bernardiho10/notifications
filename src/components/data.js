@@ -64,7 +64,8 @@ let notificationss = [
             {
                 notificationId: "comment",
                 message: "commented on your picture",
-                notificationPost: " ",
+                commentImage: "/images/image-chess.webp",
+                notificationPost: "",
                 notificationLink: "https://www.w3schools.com/howto/tryit.asp?font=Plus%20Jakarta%20Sans",
                 time: "1week ago"
             }

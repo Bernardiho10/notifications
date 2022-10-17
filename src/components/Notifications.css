@@ -83,3 +83,7 @@
 .chess{
     color: hsl(219, 85%, 26%) !important;
 }
+
+.commentImg{
+    margin-left: auto;
+}
